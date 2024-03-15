@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đặt Hàng</title>
+    <style>
+        body {
+            background-image: url(./background.jpg);
+    width: 100%;
+    height: 500px;
+    text-align: center;
+    padding: 30px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgb(152, 194, 152) ;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #444;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        button[type="submit"] {
+            background-color: rgb(225, 166, 56);
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>ĐẶT HÀNG</h1>
+        
+        <form action="/process_order" method="post">
+            <label for="name">Họ và tên:</label><br>
+            <input type="text" id="name" name="name" required><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br>
+
+            <label for="address">Địa chỉ giao hàng:</label><br>
+            <textarea id="address" name="address" required></textarea><br>
+
+            <label for="phone">Số điện thoại:</label><br>
+            <input type="tel" id="phone" name="phone" required><br>
+
+            <label for="product">Phân loại: </label><br>
+            <select id="product" name="product" required>
+                <option value="product1"></option>
+                <option value="product1">Hoa quả Việt Nam</option>
+                <option value="product2">Hoa quả nhập khẩu</option>
+                <option value="product3">Hoa quả Nhật Bản</option>
+                <option value="product3">Hoa quả giảm giá</option>
+            </select><br>
+            <label for="product">Sản phẩm:</label><br>
+            <select id="product" name="product" required>
+                <option value="product1"></option>
+                <option value="product1">Xoài Trung Quốc</option>
+                <option value="product2">Nho Hàn Quốc</option>
+                <option value="product3">Mận Chi-lê</option>
+                <option value="product3">Lê Hàn Quốc</option>
+                <option value="product1">Vải thiều Bắc Giang</option>
+                <option value="product1">Mãng cầu xiêm</option>
+                <option value="product1">Sầu riêng</option>
+                <option value="product1">Vú sữa Lò rèn</option>
+                <option value="product1">Bưởi da xanh</option>
+                <option value="product1">Bưởi năm roi</option>
+                <option value="product1">Thanh long ruột trắng</option>
+                <option value="product1">Thanh long ruột đỏ</option>
+                <option value="product1">Măng cụt</option>
+                <option value="product1">Hồng giòn</option>
+                <option value="product1">Dưa lưới</option>
+                <option value="product1">Dưa hấu vuông</option>
+                <option value="product1">Quả Biwa</option>
+                <option value="product1">Dâu Bạch Tuyết Nhật Bản</option>
+                <option value="product1">Dưa chuột kiwano</option>
+                <option value="product1">Táo đỏ Sekai-ichi</option>
+                <option value="product1">Nho đen kyoho</option>
+                <option value="product1">Táo Fuji Mỹ giòn đỏ</option>
+                <option value="product1">Lê sữa Hàn Quốc</option>
+                <option value="product1">Cam vàng Navel</option>
+            </select><br>
+
+            <label for="quantity">Khối lượng:</label><br>
+            <input type="number" id="quantity" name="quantity" min="1" max="100" required><br><label for="quantity">kg</label><br>
+
+            <button type="submit">Đặt hàng</button>
+        </form>
+    </div>
+</body>
+</html>

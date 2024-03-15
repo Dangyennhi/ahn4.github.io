@@ -1,0 +1,29 @@
+
+.search-container {
+    position: relative;
+    display: inline-block; /* Cho phép ô tìm kiếm và nút nằm trên cùng một dòng */
+}
+  .search-container input[type="text"] {
+    width: calc(100% - 40px); /* Sử dụng calc() để tính toán chiều rộng của ô tìm kiếm với khoảng cách 40px cho nút */
+    padding: 15px; /* Lề bên trong của ô tìm kiếm */
+    border: 1px solid #ccc; /* Viền của ô tìm kiếm */
+    border-radius: 5px; /* Bo tròn góc của ô tìm kiếm */
+  }
+  
+  .search-container button {
+    position: absolute; /* Đặt vị trí tuyệt đối cho nút */
+    top: 0;
+    right: 0;
+    padding: 15px; /* Lề bên trong của nút */
+    border: none; /* Không có đường viền */
+    background: #ccc; /* Màu nền của nút */
+    border-radius: 0 5px 5px 0; /* Bo tròn góc của nút (bên phải) */
+    cursor: pointer; /* Kiểu con trỏ khi di chuột qua nút */
+  }
+  
+  /* Định dạng biểu tượng tìm kiếm và kính lúp */
+  .fa-search,
+  .fa-search-plus {
+    color: white; /* Màu chữ của biểu tượng */
+  }
+  
